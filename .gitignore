@@ -1,0 +1,20 @@
+### 拡張子
+*.log
+*.txt
+*.png
+*.jpg
+*.jpeg
+*.gif
+*.tif
+*.tiff
+*.svg
+*.mp3
+
+### フォルダ
+tmp/
+img/
+images/
+uploads/
+
+### 隠しファイル
+.DS_Store
