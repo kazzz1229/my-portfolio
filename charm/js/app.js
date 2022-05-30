@@ -1,41 +1,36 @@
-//*** 時計 ***//
-function showCurrentTime(){
-    let now = new Date();
-    let hour = now.getHours();
-    let min = now.getMinutes();
-    let sec = now.getSeconds();
-
-    let time = hour + '時' + min + '分' + sec + '秒';
-    return time;
+//***** 時計 *****//
+function getDateTime(){
+    let today = new Date();
+    let clockTime = today.toLocaleString();
+    return clockTime;
 }
 
-function clock(){
-	document.getElementById('time').innerHTML = showCurrentTime();
+function showClock(){
+	document.getElementById('clock').innerHTML = getDateTime();
 }
 
-setInterval("clock()", 500);  //0.5秒毎に clock()を実行
-//*** 時計 ***//
+setInterval("showClock()", 100);  //0.1秒毎に showClock()を実行
+//***** 時計 *****//
 
-//*** チャイム ***//
-let chimeTime = document.getElementById('chime');
-
+//***** チャイム *****//
 function getCurrentTime(){
     let now = new Date();
-    let hour = now.getHours();
-    let min = now.getMinutes();
+    let hour = now.getHours().toString().padStart(2, '0');
+    let min = now.getMinutes().toString().padStart(2, '0');
 
     let currentTime = hour + ':' + min 
     return currentTime;
 }
-
-let currentTime = setInterval("getCurrentTime()", 500);
+setInterval("getCurrentTime()", 100);
 
 function compareTime(){
-    if(chimeTime.value == currentTime){
-        let audioElem = new Audio('../audio/Japanese_School_Bell02-02(Slow-Mid).mp3');
+    let chime = document.getElementById('chime');
+
+    if(chime.value == getCurrentTime()){
+        let audioElem = new Audio('audio/Japanese_School_Bell02-02(Slow-Mid).mp3');  //このJSを読み込んでいるHTMLから見たパス
         audioElem.play();
+        clearInterval(chimeID);
     }
 }
-setInterval("compareTime()", 500);
-
-//*** チャイム ***//
+let chimeID = setInterval("compareTime()", 100);
+//***** チャイム *****//
