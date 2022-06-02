@@ -1,0 +1,32 @@
+.clock-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 40vh;
+    width: 50vw;
+    margin: 10px auto 10px;
+}
+
+#clock{
+    height: 50%;
+    width: 80%;
+    text-align: center;
+    line-height: 20vh;
+    border: solid 10px rgb(0, 0, 0);
+    font-size: 50px;
+}
+
+.chime-container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    height: 45vh;
+    width: 79vw;
+    margin: 0 auto;
+    border: solid 10px rgb(0, 0, 0);
+}
+
+.chime{
+    align-self: center;
+}

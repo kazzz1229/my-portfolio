@@ -9,6 +9,7 @@
 *.tiff
 *.svg
 *.mp3
+*.md
 
 ### フォルダ
 tmp/
