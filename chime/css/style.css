@@ -3,17 +3,17 @@
     align-items: center;
     justify-content: center;
     height: 40vh;
-    width: 50vw;
-    margin: 10px auto 10px;
+    width: 60vw;
+    margin: 10px auto;
 }
 
 #clock{
     height: 50%;
     width: 80%;
     text-align: center;
-    line-height: 20vh;
+    line-height: 21vh;
     border: solid 10px rgb(0, 0, 0);
-    font-size: 50px;
+    font-size: 3.2em;
 }
 
 .chime-container{
@@ -22,11 +22,16 @@
     flex-wrap: wrap;
     justify-content: space-evenly;
     height: 45vh;
-    width: 79vw;
+    width: 90vw;
     margin: 0 auto;
     border: solid 10px rgb(0, 0, 0);
 }
 
 .chime{
     align-self: center;
+    width: 15%;
 }
+
+/* input[id^="chime"]{
+    font-weight: bold;
+} */

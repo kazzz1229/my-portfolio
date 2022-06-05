@@ -13,6 +13,7 @@ setInterval("showClock()", 100);  //0.1秒毎に showClock()を実行
 //***** 時計 *****//
 
 //***** チャイム *****//
+//現在時刻を inputタグと同じ形式で取得
 function getCurrentTime(){
     let now = new Date();
     let hour = now.getHours().toString().padStart(2, '0');  //例） 1を01にする
@@ -23,6 +24,7 @@ function getCurrentTime(){
 }
 setInterval("getCurrentTime()", 100);
 
+//設定時刻と現在時刻が一致したらチャイムを鳴らす
 function compareTime(chimeTime, chimeID){
     if(chimeTime == getCurrentTime()){
         let audioElem = new Audio('audio/Japanese_School_Bell02-02(Slow-Mid).mp3');  //このJSを読み込んでいるHTMLから見たパス
