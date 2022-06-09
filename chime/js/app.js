@@ -22,7 +22,7 @@ function getCurrentTime(){
     let currentTime = hour + ':' + min 
     return currentTime;
 }
-setInterval("getCurrentTime()", 100);
+//setInterval("getCurrentTime()", 100);
 
 //設定時刻と現在時刻が一致したらチャイムを鳴らす
 function compareTime(chimeTime, chimeID){
